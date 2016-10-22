@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {# Title #}
+    <h1>{{ title }}</h1>
+    {% if subtitle is defined %}
+        <h2>{{ subtitle }}</h2>
+    {% endif %}
+    
+    {# message to display #}
+    {{ message|raw}}
+
+{% endblock %}

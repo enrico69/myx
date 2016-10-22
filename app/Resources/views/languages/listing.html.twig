@@ -1,0 +1,13 @@
+{% for language in languages %}
+    <a href="{{ url('language_details', {'slug': language.slug})}}">{{ language.name}}</a>
+    {% if is_granted('ROLE_USER') %}
+        <span class="editButtonsContainer" style="float:right;"><a class="editButton" href="{{ url('language_edition', {'id': language.id})}}">{% trans %}Edit{% endtrans %}</a></span>
+        <span style="float:right">
+            <form method="POST" action="{{ url('language_deletion', {'id': language.id})}}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('languageDeleteForm')}}"/>
+                <input onclick="return areYouSure();" type="submit" class="deleteButton" value="{% trans %}Delete{% endtrans %}"/>
+            </form>
+        </span>
+    {% endif %}
+    <hr>
+{% endfor%}

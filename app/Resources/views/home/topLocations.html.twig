@@ -1,0 +1,9 @@
+{% extends 'home/topLocationsContainer.html.twig' %}
+{% block locationContains %}
+    {% for theLocation in theLocations %}
+        <p class="widgetLine"><span class="bookHomeTitle">
+            {{theLocation['name']}}</span> ({{theLocation['qty_occurences']}}
+                {%transchoice theLocation['qty_occurences'] %}book{%endtranschoice%})
+        </p>
+    {% endfor %}
+{% endblock %}

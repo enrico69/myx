@@ -1,0 +1,13 @@
+{% for author in authors %}
+    <a href="{{ url('author_details', {'slug': author.slug})}}">{{ author.surname}} {{ author.name}}</a>
+    {% if is_granted('ROLE_USER') %}
+        <span class="editButtonsContainer" style="float:right;"><a class="editButton" href="{{ url('author_edition', {'id': author.id})}}">{% trans %}Edit{% endtrans %}</a></span>
+        <span style="float:right">
+            <form method="POST" action="{{ url('author_deletion', {'id': author.id})}}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authorDeleteForm')}}"/>
+                <input onclick="return areYouSure();" type="submit" class="deleteButton" value="{% trans %}Delete{% endtrans %}"/>
+            </form>
+        </span>
+    {% endif %}
+    <hr>
+{% endfor%}

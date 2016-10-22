@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>{{book.title}}</h1>
+    <h2>{% trans %}Details{% endtrans %}</h2>
+    <p>Id: {{ book.id }} </p>
+    <p>{% trans %}Year{% endtrans %} : {{ book.year }}</p>
+    <p>{% trans %}Material{% endtrans %} : {{ book.material.name | trans() }}</p>
+    <p>{% transchoice 1 %}Editor{% endtranschoice %} : {{ book.editor.name }}</p>
+    <p>{% transchoice 1 %}Format{% endtranschoice %} : {{ book.format.name }}</p>
+    <p>{% transchoice 1 %}Language{% endtranschoice %} : {{ book.language.name }}</p>
+    <p>{% trans %}Added{% endtrans %} : {{ book.additionDate.format('d-m-Y') }}</p>
+    <p>ISBN : {{ book.isbncontent }}</p>
+    <p>{% trans %}Keywords{% endtrans %} : {{ book.keywords }}</p>
+    <p>{% trans %}AddedBy{% endtrans %} : {{ book.user.name }} {{ book.user.surname }}</p>
+    {% if book.lastUser %}
+        <p>{% trans %}LastModification{% endtrans %}: {{ book.lastModified.format('d-m-Y') }} {% trans %}by{% endtrans %} {{ book.lastUser.name }} {{ book.user.surname }}</p>
+    {% endif %}
+    <h2>{% trans %}Description{% endtrans %} : </h2>
+    <p>{{ book.description }}</p>
+    <h2>{% trans %}MoreInfos{% endtrans %}</h2>
+    <h3>{% trans %}Notes{% endtrans %}</h3>
+    {% if is_granted('ROLE_USER') %}
+        <div class="subBarButtonsContainer"><a class="addButton" href="{{url('note_addition', {'bookid': book.id})}}">{% trans %}Add{% endtrans %}</a></div>
+    {% endif %}
+    <br/><br/>
+        {% if notes is defined %}
+            {% for note in notes %}
+                {% trans %}PostedBy{% endtrans %} {{note.user.name}} {{note.user.surname}} :
+                <a target="_blank" href="{{ asset('notes/') ~ note.filename}}">{% trans %}Download{% endtrans %}</a>
+                {% if is_granted('ROLE_USER') and app.user.id == note.user.id%}
+                    <span style="float:right">
+                        <form method="POST" action="{{ url('note_deletion', {'id': note.id})}}">
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token('noteDeleteForm')}}"/>
+                            <input onclick="return areYouSure();" type="submit" class="deleteButton" value="{% trans %}Delete{% endtrans %}"/>
+                        </form>
+                    </span>
+                {% endif %}
+                <hr/>
+            {% endfor%}
+        {% else %}
+           {% trans %}NoNotes{% endtrans %} 
+        {% endif %}
+    <br/>
+    <h3>{% trans %}Comments{% endtrans %}</h3>
+    {% if is_granted('ROLE_USER') %}
+        <div class="subBarButtonsContainer"><a class="addButton" href="{{url('comment_addition', {'bookid': book.id})}}">{% trans %}Add{% endtrans %}</a></div>
+    {% endif %}
+    <br/><br/>
+    <div id="commentsList">
+        {% if comments is defined %}
+            {% for comment in comments %}
+                {{comment.user.name}} {{comment.user.surname}}
+                {% if is_granted('ROLE_USER') and app.user.id == comment.user.id%}
+                <span class="editButtonsContainer" style="float:right;"><a class="editButton" href="{{url('comment_edition', {'id': comment.id})}}">{% trans %}Edit{% endtrans %}</a></span>
+                    <span style="float:right">
+                        <form method="POST" action="{{ url('comment_deletion', {'id': comment.id})}}">
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token('commentDeleteForm')}}"/>
+                            <input onclick="return areYouSure();" type="submit" class="deleteButton" value="{% trans %}Delete{% endtrans %}"/>
+                        </form>
+                    </span>
+                {% endif %}
+                <br/>
+                {{comment.comment}}
+                <hr/>
+            {% endfor%}
+        {% else %}
+           {% trans %}NoComments{% endtrans %} 
+        {% endif %}
+    </div>
+{% endblock %}

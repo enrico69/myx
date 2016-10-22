@@ -1,0 +1,13 @@
+{% for kind in kinds %}
+    <a href="{{ url('kind_details', {'slug': kind.slug})}}">{{kind.name}}</a>
+    {% if is_granted('ROLE_USER') %}
+        <span class="editButtonsContainer" style="float:right;"><a class="editButton" href="{{ url('kind_edition', {'id': kind.id})}}">{% trans %}Edit{% endtrans %}</a></span>
+        <span style="float:right">
+            <form method="POST" action="{{ url('kind_deletion', {'id': kind.id})}}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('kindDeleteForm')}}"/>
+                <input onclick="return areYouSure();" type="submit" class="deleteButton" value="{% trans %}Delete{% endtrans %}"/>
+            </form>
+        </span>
+    {% endif %}
+    <hr>
+{% endfor%}

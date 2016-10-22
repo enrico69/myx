@@ -1,0 +1,523 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="fr" datatype="plaintext"
+    original="file.ext">
+        <body>
+            <trans-unit id="1">
+            <source>subwelcome.message</source>
+            <target>Il y a actuellement %qty% livre enregistré
+                    dans la base|Il y a actuellement %qty% livres enregistrés
+                    dans la base
+            </target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>load.last.books.failed</source>
+                <target>Impossible de lister les derniers livres ajoutés
+                </target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>no.book.found</source>
+                <target>Aucun livre trouvé</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>error.count.qty.books</source>
+                <target>Impossible de compter le nombre de livres enregitrés
+                </target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>added.in</source>
+                <target>ajouté en</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>lastbookswidget.title</source>
+                <target>Derniers livres</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>toplocationswidget.title</source>
+                <target>Top 5 emplacements</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>topcontributorswidget.title</source>
+                <target>Top 5 contributeurs</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>topauthorswidget.title</source>
+                <target>Top 5 auteurs</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>load.top.locations.failed</source>
+                <target>Impossible de lister les emplacements les plus
+                utilisés</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>no.location.found</source>
+                <target>Aucun emplacement trouvé</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>book</source>
+                <target>livre|livres</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>load.top.contributors.failed</source>
+                <target>Impossible de lister les plus grands contributeurs</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>no.contributors.found</source>
+                <target>Aucun contributeur trouvé</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>load.top.authors.failed</source>
+                <target>Impossible de lister les auteurs les plus prolifiques</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>no.authors.found</source>
+                <target>Aucun auteur trouvé</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>Book</source>
+                <target>Livre|Livres</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>Author</source>
+                <target>Auteur|Auteurs</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>Location</source>
+                <target>Emplacement|Emplacements</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>Kind</source>
+                <target>Genre|Genres</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>Format</source>
+                <target>Format|Formats</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>Editor</source>
+                <target>Editeur|Editeurs</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>Login</source>
+                <target>Connexion</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>Home</source>
+                <target>Accueil</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>Licence</source>
+                <target>Publié sous licence MIT</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>Since</source>
+                <target>Depuis</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>Language</source>
+                <target>Langage|Langages</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>search.results</source>
+                <target>Résultats de la recherche</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>research.subtitle</source>
+                <target>Recherche de l'occurence "%request%" dans la partie %type%
+               </target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>Title</source>
+                <target>Titre</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>Description</source>
+                <target>Description</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>Keywords</source>
+                <target>Mots-Clés</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>NoResults</source>
+                <target>No results</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>SearchError</source>
+                <target>Erreur lors de la recherche</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>MissingSearchKind</source>
+                <target>Le genre de la recherche est manquant ou inconnu</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>MissingKeywordSearch</source>
+                <target>Vous devez spécifier un mot-clef pour la recherche</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>searchKeyword</source>
+                <target>Saisir un mot-clé</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>Search</source>
+                <target>Rechercher</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>errorListingEditors</source>
+                <target>Une erreur s'est produite lors du listage des éditeurs.</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>Add</source>
+                <target>Ajouter</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>used.by.books</source>
+                <target>Cet élément est utilisé par certains livres. Il ne peut donc être supprimé.</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>csrfInactive</source>
+                <target>Votre session est restée inactive trop longtemps. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>editor.deletionError</source>
+                <target>Une erreur est survenue durant la suppression de cet éditeur. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="44">
+                <source>Delete</source>
+                <target>Supprimer</target>
+            </trans-unit>
+            <trans-unit id="45">
+                <source>confirmationMessage</source>
+                <target>Etes-vous sûr?</target>
+            </trans-unit>
+             <trans-unit id="46">
+                <source>editor.Edition</source>
+                <target>Modification de l'éditeur</target>
+            </trans-unit>
+            <trans-unit id="47">
+                <source>Update</source>
+                <target>Mettre à jour</target>
+            </trans-unit>
+            <trans-unit id="48">
+                <source>Edit</source>
+                <target>Editer</target>
+            </trans-unit>
+            <trans-unit id="49">
+                <source>Slug</source>
+                <target>Identifiant URL</target>
+            </trans-unit>
+            <trans-unit id="50">
+                <source>Name</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="51">
+                <source>language.Addition</source>
+                <target>Ajout d'un langage</target>
+            </trans-unit>
+            <trans-unit id="52">
+                <source>Error</source>
+                <target>Erreur</target>
+            </trans-unit>
+            <trans-unit id="53">
+                <source>editor.Addition</source>
+                <target>Ajout d'un éditeur</target>
+            </trans-unit>
+            <trans-unit id="54">
+                <source>field.already.exists</source>
+                <target>Le %field% doit être unique. Une entrée existante utilise déjà celui que vous avez saisi.</target>
+            </trans-unit>
+            <trans-unit id="55">
+                <source>errorListingFormats</source>
+                <target>Une erreur s'est produite lors du listage des formats</target>
+            </trans-unit>
+            <trans-unit id="56">
+                <source>format.deletionError</source>
+                <target>Une erreur est survenue durant la suppression de cet format. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="57">
+                <source>format.Edition</source>
+                <target>Modification d'un format</target>
+            </trans-unit>
+            <trans-unit id="58">
+                <source>format.Addition</source>
+                <target>Ajout d'un format</target>
+            </trans-unit>
+            <trans-unit id="59">
+                <source>Save</source>
+                <target>Enregistrer</target>
+            </trans-unit>
+            <trans-unit id="60">
+                <source>MultipleFound</source>
+                <target>Désolé mais nous ne pouvons traiter cette demande: plusieurs enregistrements ont la même valeur pour le champ %field%</target>
+            </trans-unit>
+            <trans-unit id="61">
+                <source>errorListingLanguages</source>
+                <target>Une erreur s'est produite lors du listage des langages</target>
+            </trans-unit>
+            <trans-unit id="62">
+                <source>language.deletionError</source>
+                <target>Une erreur est survenue durant la suppression de cet langage. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="63">
+                <source>language.Edition</source>
+                <target>Modification d'un langage</target>
+            </trans-unit>
+            <trans-unit id="64">
+                <source>language.Addition</source>
+                <target>Ajout d'un langage</target>
+            </trans-unit>
+            <trans-unit id="65">
+                <source>slugEmpty</source>
+                <target>Après traitement (suppression des caractères interdits), l'identifiant URL (SLUG) est vide. Merci d'en propser un autre.</target>
+            </trans-unit>
+            <trans-unit id="66">
+                <source>NoResultsWithThisAttribute</source>
+                <target>Il n'y a actuellement aucun élément en lien avec et enregistrement.</target>
+            </trans-unit>
+            <trans-unit id="67">
+                <source>Surname</source>
+                <target>Nom de famille</target>
+            </trans-unit>
+            <trans-unit id="68">
+                <source>errorListingAuthors</source>
+                <target>Une erreur s'est produite lors du listage des auteurs.</target>
+            </trans-unit>
+            <trans-unit id="69">
+                <source>author.deletionError</source>
+                <target>Une erreur est survenue durant la suppression de cet auteur. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="70">
+                <source>author.Edition</source>
+                <target>Modification d'un auteur</target>
+            </trans-unit>
+            <trans-unit id="71">
+                <source>author.Addition</source>
+                <target>Ajout d'un auteur</target>
+            </trans-unit>
+            <trans-unit id="72">
+                <source>errorListingKinds</source>
+                <target>Une erreur s'est produite lors du listage des genres.</target>
+            </trans-unit>
+            <trans-unit id="73">
+                <source>kind.deletionError</source>
+                <target>Une erreur est survenue durant la suppression de ce genre. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="74">
+                <source>kind.Edition</source>
+                <target>Modification d'un genre</target>
+            </trans-unit>
+            <trans-unit id="75">
+                <source>kind.Addition</source>
+                <target>Ajout d'un genre</target>
+            </trans-unit>
+            <trans-unit id="76">
+                <source>errorListingLocations</source>
+                <target>Une erreur est survenue durant la suppression de cet emplacement. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="77">
+                <source>location.deletionError</source>
+                <target>Une erreur s'est produite lors du listage des emplacements.</target>
+            </trans-unit>
+            <trans-unit id="78">
+                <source>location.Edition</source>
+                <target>Modification d'un emplacement</target>
+            </trans-unit>
+            <trans-unit id="79">
+                <source>location.Addition</source>
+                <target>Ajout d'un emplacement</target>
+            </trans-unit>
+            <trans-unit id="80">
+                <source>Comments</source>
+                <target>Commentaires</target>
+            </trans-unit>
+            <trans-unit id="81">
+                <source>NoComments</source>
+                <target>Cet élément n'a pas encore été commenté.</target>
+            </trans-unit>
+            <trans-unit id="82">
+                <source>errorListingBooks</source>
+                <target>Une erreur s'est produite lors du listage des livres</target>
+            </trans-unit>
+            <trans-unit id="83">
+                <source>book.deletionError</source>
+                <target>Une erreur est survenue durant la suppression de ce livre. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="84">
+                <source>book.Edition</source>
+                <target>Modification d'un livre</target>
+            </trans-unit>
+            <trans-unit id="85">
+                <source>book.Addition</source>
+                <target>Ajout d'un livre</target>
+            </trans-unit>
+            <trans-unit id="86">
+                <source>insertion.Error</source>
+                <target>Une erreur s'est produite lors de la sauvegarde.</target>
+            </trans-unit>
+            <trans-unit id="87">
+                <source>comment.Addition</source>
+                <target>Ajout d'un commentaire</target>
+            </trans-unit>
+            <trans-unit id="88">
+                <source>Comment</source>
+                <target>Commentaire</target>
+            </trans-unit>
+            <trans-unit id="89">
+                <source>formCommentError</source>
+                <target>Erreur durant la génération du formulaire d'ajout de commentaire.</target>
+            </trans-unit>
+            <trans-unit id="90">
+                <source>book.NotFound</source>
+                <target>Le livre demandé n'a pas été trouvé.</target>
+            </trans-unit>
+            <trans-unit id="91">
+                <source>comment.Edition</source>
+                <target>Modification d'un commentaire</target>
+            </trans-unit>
+            <trans-unit id="92">
+                <source>comment.deletionError</source>
+                <target>Une erreur est survenue durant la suppression de ce commentaire Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="93">
+                <source>genericError</source>
+                <target>Nous sommes désolé, est un erreur est survenue. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="94">
+                <source>AuthFileType</source>
+                <target>Fichier (.pdf, .txt, .doc, .docx)</target>
+            </trans-unit>
+            <trans-unit id="95">
+                <source>note.Addition</source>
+                <target>ajout d'une note</target>
+            </trans-unit>
+            <trans-unit id="96">
+                <source>Notes</source>
+                <target>Notes</target>
+            </trans-unit>
+            <trans-unit id="97">
+                <source>PostedBy</source>
+                <target>Posté par</target>
+            </trans-unit>
+            <trans-unit id="98">
+                <source>NoNotes</source>
+                <target>Aucunes notes ne sont actuellement disponibles pour ce livre</target>
+            </trans-unit>
+            <trans-unit id="99">
+                <source>Download</source>
+                <target>Télécharger</target>
+            </trans-unit>
+            <trans-unit id="100">
+                <source>note.deletionError</source>
+                <target>Une erreur est survenue durant la suppression de cette note. Merci de réessayer.</target>
+            </trans-unit>
+            <trans-unit id="101">
+                <source>Year</source>
+                <target>Année</target>
+            </trans-unit>
+            <trans-unit id="102">
+                <source>ISBN</source>
+                <target>Numéro ISBN</target>
+            </trans-unit>
+            <trans-unit id="103">
+                <source>Editor.single</source>
+                <target>Editeur</target>
+            </trans-unit>
+            <trans-unit id="104">
+                <source>Language.single</source>
+                <target>Langage</target>
+            </trans-unit>
+            <trans-unit id="105">
+                <source>Format.single</source>
+                <target>Format</target>
+            </trans-unit>
+            <trans-unit id="106">
+                <source>edition.error</source>
+                <target>Une erreur s'est produit durant le processus d'éditon</target>
+            </trans-unit>
+            <trans-unit id="107">
+                <source>MoreInfos</source>
+                <target>Informations complémentaires</target>
+            </trans-unit>
+            <trans-unit id="108">
+                <source>Details</source>
+                <target>Details</target>
+            </trans-unit>
+            <trans-unit id="109">
+                <source>Added</source>
+                <target>Ajouté le</target>
+            </trans-unit>
+            <trans-unit id="110">
+                <source>AddedBy</source>
+                <target>Ajouté par</target>
+            </trans-unit>
+            <trans-unit id="111">
+                <source>AlreadyDeleted</source>
+                <target>Cet élément a déjà été supprimé</target>
+            </trans-unit>
+            <trans-unit id="112">
+                <source>book.deletionError</source>
+                <target>Une erreur est survenue durant le processus de suppression du livre</target>
+            </trans-unit>
+            <trans-unit id="113">
+                <source>Location.plural</source>
+                <target>Emplacements</target>
+            </trans-unit>
+            <trans-unit id="114">
+                <source>Author.plural</source>
+                <target>Auteurs</target>
+            </trans-unit>
+            <trans-unit id="115">
+                <source>Kind.plural</source>
+                <target>Genres</target>
+            </trans-unit>
+            <trans-unit id="116">
+                <source>Login</source>
+                <target>Connexion</target>
+            </trans-unit>
+            <trans-unit id="117">
+                <source>Logout</source>
+                <target>Déconnexion</target>
+            </trans-unit>
+            <trans-unit id="118">
+                <source>WaitingValidation</source>
+                <target>Inscription complète. Votre compte sera activé prochainement.</target>
+            </trans-unit>
+            <trans-unit id="119">
+                <source>Language</source>
+                <target>Langage</target>
+            </trans-unit>
+            <trans-unit id="120">
+                <source>Human.Name</source>
+                <target>Prénom</target>
+            </trans-unit>
+            <trans-unit id="121">
+                <source>LastModification</source>
+                <target>Dernière modification</target>
+            </trans-unit>
+            <trans-unit id="122">
+                <source>by</source>
+                <target>par</target>
+            </trans-unit>
+            <trans-unit id="123">
+                <source>errorListingMaterials</source>
+                <target>Une erreur s'est produite lors du listage des supports</target>
+            </trans-unit>
+            <trans-unit id="124">
+                <source>Numeric</source>
+                <target>Numérique</target>
+            </trans-unit>
+            <trans-unit id="125">
+                <source>Audio</source>
+                <target>Audio</target>
+            </trans-unit>
+            <trans-unit id="126">
+                <source>Paper</source>
+                <target>Papier</target>
+            </trans-unit>
+            <trans-unit id="127">
+                <source>Material</source>
+                <target>Support</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

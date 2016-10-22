@@ -1,0 +1,7 @@
+<div>
+    {% if is_granted('ROLE_USER') %}
+        <div class="subBarButtonsContainer"><a class="addButton" href="{{url('book_addition')}}">{% trans %}Add{% endtrans %}</a></div
+    {% endif %}
+</div>
+<div style="clear:both;"></div>
+<hr>

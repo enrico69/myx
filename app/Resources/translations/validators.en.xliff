@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext"
+    original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>name.too.short</source>
+                <target>The name must be at least {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>name.too.long</source>
+                <target>The name cannot be longer than {{ limit }} characters</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>slug.too.short</source>
+                <target>The slug must be at least {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>slug.too.long</source>
+                <target>The slug cannot be longer than {{ limit }} characters</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>surname.too.short</source>
+                <target>The surname must be at least {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>surname.too.long</source>
+                <target>The surname cannot be longer than {{ limit }} characters</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>humanName.too.short</source>
+                <target>The name must be at least {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>humanName.too.long</source>
+                <target>The name cannot be longer than {{ limit }} characters</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>comment.too.short</source>
+                <target>The comment must be at least {{ limit }} characters long</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>comment.too.long</source>
+                <target>The comment cannot be longer than {{ limit }} characters</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>select.good.file</source>
+                <target>Please select a file with the proper format.</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>file.too.big</source>
+                <target>The file is too large ({{ size }} {{ suffix }}). Allowed maximum size is {{ limit }} {{ suffix }}</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>user.name.not.blank</source>
+                <target>The name cannot be empty</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>user.name.too.short</source>
+                <target>The name is too short</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>user.name.too.long</source>
+                <target>The name is too long</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>user.surname.too.short</source>
+                <target>The surname is too short</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>user.surname.too.long</source>
+                <target>The surname is too long</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>user.surname.not.blank</source>
+                <target>The surname cannot be empty</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

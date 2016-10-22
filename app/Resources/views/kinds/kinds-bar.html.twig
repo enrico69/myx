@@ -1,0 +1,13 @@
+<div>
+    <div style="float:left;">
+        <form method="GET" id="kind_search_form" name="kind_search_form" action="{{ url('kind_search_results') }}">
+            <input type="text" name="keyword" id="keyword" value="{% trans %}searchKeyword{% endtrans %}">
+            <input class="searchButton" type="submit" value="{% trans %}Search{% endtrans %}"/>
+        </form>
+    </div>
+    {% if is_granted('ROLE_USER') %}
+        <div class="subBarButtonsContainer"><a class="addButton" href="{{url('kind_addition')}}">{% trans %}Add{% endtrans %}</a></div>
+    {% endif %}
+</div>
+<div style="clear:both;"></div>
+<hr>

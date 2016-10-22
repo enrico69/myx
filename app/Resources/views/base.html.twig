@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="noindex">
+        <title>{% block title %}{{ site_welcome_message }}{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('css/bootstrap-theme.css') }}" rel="stylesheet" />
+            <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
+            <link href="{{ asset('css/global.css') }}" rel="stylesheet" />
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{url('homepage')}}">{%trans%}Home{%endtrans%}</a></li>
+                        <li class="active"><a href="{{url('books_index')}}">{%transchoice 2 %}Book{%endtranschoice%}</a></li>
+                        <li class="active"><a href="{{url('authors_index')}}">{%transchoice 2 %}Author{%endtranschoice%}</a></li>
+                        <li class="active"><a href="{{url('locations_index')}}">{%transchoice 2 %}Location{%endtranschoice%}</a></li>
+                        <li class="active"><a href="{{url('kinds_index')}}">{%transchoice 2 %}Kind{%endtranschoice%}</a></li>
+                        <li class="active"><a href="{{url('formats_index')}}">{%transchoice 2 %}Format{%endtranschoice%}</a></li>
+                        <li class="active"><a href="{{url('editors_index')}}">{%transchoice 2%}Editor{%endtranschoice%}</a></li>
+                        <li class="active"><a href="{{url('languages_index')}}">{%transchoice 2 %}Language{%endtranschoice%}</a></li>
+                        {% if app.user %}
+                        <li class="active"><a href="{{ url('fos_user_security_logout') }}">{%trans%}Logout{%endtrans%}</a></li>
+                        {% else %}
+                        <li class="active"><a href="{{ url('fos_user_security_login')}}">{%trans%}Login{%endtrans%}</a></li>
+                        {% endif %}
+                        <li>
+                            <img id="searchIcon" src="{{ asset('img/icon_search.png')}}" width="32" height="32"/>
+                            <div id="searchFormContainer">{{include('books/searchForm.html.twig')}}</div>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            <div style="width:100%; text-align:center;"><img src="/img/logo-site.png"/></div>
+        {% block body %}{% endblock %}
+        </div> <!-- /container -->
+        <div style="clear:both; width : 100%; height: 150px;"></div>
+        <footer id='footer'>
+            <div id='bandeau-footer'></div>
+            <div id='mentions'><p>
+            {%trans%}Since{%endtrans%} 2016 - Version {{ version }}  -  Powered by Symfony 3.1.3. {%trans%}Licence{%endtrans%}.</p></div>
+        </footer>
+        {% block javascripts %}
+         <!-- Scripts -->
+        <!--[if lt IE 9]><script type="text/javascript" src="/js/html5shiv.js"></script><![endif]-->
+        <!--[if lt IE 9]><script type="text/javascript" src="/js/respond.min.js"></script><![endif]-->
+        <script src="{{ asset('scripts/html5shiv.js') }}"></script>
+        <script src="{{ asset('scripts/jquery.min.js') }}"></script>
+        <script src="{{ asset('scripts/respond.min.js') }}"></script>
+        <script src="{{ asset('scripts/bootstrap.js') }}"></script>
+        <script src="{{ asset('scripts/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('scripts/mine.js') }}"></script>
+        <script type="text/javascript">
+            function areYouSure() {
+                var bnlState = false;
+                if (confirm("{% trans %}confirmationMessage{% endtrans %}") == true) {
+                    bnlState = true;
+                }
+
+                return bnlState;
+            }
+        </script>
+        {% endblock %}
+    </body>
+</html>

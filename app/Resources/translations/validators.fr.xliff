@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext"
+    original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>name.too.short</source>
+                <target>Le nom doit avoir une longueur minimale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>name.too.long</source>
+                <target>Le nom doit avoir une longueur maximale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>slug.too.short</source>
+                <target>Le slug doit avoir une longueur minimale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>slug.too.long</source>
+                <target>Le slug doit avoir une longueur maximale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>surname.too.short</source>
+                <target>Le nom de famille doit avoir une longueur minimale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>surname.too.long</source>
+                <target>Le nom de famille doit avoir une longueur maximale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>humanName.too.short</source>
+                <target>Le prénom doit avoir une longueur minimale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>humanName.too.long</source>
+                <target>Le prénom doit avoir une longueur maximale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>comment.too.short</source>
+                <target>Le commentaire doit avoir une longueur minimale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>comment.too.long</source>
+                <target>Le commentaire de famille doit avoir une longueur maximale de {{ limit }} caractères</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>select.good.file</source>
+                <target>Merci de fournir un fichier au bon format.</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>file.too.big</source>
+                <target>Le fichier est trop gros. La taille limite autorisée est de {{ limit }}</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>user.name.not.blank</source>
+                <target>Le prénom doit être précisé</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>user.name.too.short</source>
+                <target>Le prénom est trop court</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>user.name.too.long</source>
+                <target>Le prénom est trop long</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>user.surname.too.short</source>
+                <target>Le nom est trop court</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>user.surname.too.long</source>
+                <target>Le nom est trop lon</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>user.surname.not.blank</source>
+                <target>Le nom doit être précisé</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

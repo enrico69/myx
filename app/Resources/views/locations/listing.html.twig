@@ -1,0 +1,13 @@
+{% for location in locations %}
+    <a href="{{ url('location_details', {'slug': location.slug})}}">{{location.name}}</a>
+    {% if is_granted('ROLE_USER') %}
+        <span class="editButtonsContainer" style="float:right;"><a class="editButton" href="{{ url('location_edition', {'id': location.id})}}">{% trans %}Edit{% endtrans %}</a></span>
+        <span style="float:right">
+            <form method="POST" action="{{ url('location_deletion', {'id': location.id})}}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('locationDeleteForm')}}"/>
+                <input onclick="return areYouSure();" type="submit" class="deleteButton" value="{% trans %}Delete{% endtrans %}"/>
+            </form>
+        </span>
+    {% endif %}
+    <hr>
+{% endfor%}

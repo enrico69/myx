@@ -1,0 +1,10 @@
+{% extends 'home/topContributorsContainer.html.twig' %}
+{% block contributorContains %}
+    {% for theContributor in theContributors %}
+        <p class="widgetLine"><span class="bookHomeTitle">
+            {{theContributor['user_name']}}  {{theContributor['user_surname']}}</span> 
+            ({{theContributor['qty_occurences']}}
+            {%transchoice theContributor['qty_occurences'] %}book{%endtranschoice%})
+        </p>
+    {% endfor %}
+{% endblock %}

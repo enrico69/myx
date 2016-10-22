@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {# Title #}
+    <h1>{{ title }}</h1>
+    {% if subtitle is defined %}
+        <h2>{{ subtitle }}</h2>
+    {% endif %}
+    
+    {# Optionnal subview #}
+    {% if subview is defined %}
+        {{ subview|raw}}
+    {% endif %}
+    
+    {# Content to list if existing results #}
+    {% if data is defined %}
+        {{ data|raw}}
+    {% else %}
+        {%trans%}NoResultsWithThisAttribute{%endtrans%}
+    {% endif %}
+    
+    {# Pagination if existing results #}
+    {% if data is defined %}
+        {% for i in currentPage-5..currentPage-1 %}
+            {% if i > 0 %}
+                {% if slug_uri is defined %}
+                    <a href="{{ url(url_page, {'slug': slug_uri}) }}?page={{i}}{{url_complement}}">{{i}}</a>
+                {% else %}
+                    <a href="{{ url(url_page) }}?page={{i}}{{url_complement}}">{{i}}</a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        <span class="currentPage">{{ currentPage }}</span>
+        {% for i in currentPage + 1..currentPage + 5 %}
+            {% if i <= qtyOfPages %}
+                {% if slug_uri is defined %}
+                    <a href="{{ url(url_page, {'slug': slug_uri}) }}?page={{i}}{{url_complement}}">{{i}}</a>
+                {% else %}
+                    <a href="{{ url(url_page) }}?page={{i}}{{url_complement}}">{{i}}</a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

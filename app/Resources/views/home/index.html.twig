@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1 class="h1Home">{{welcomeMessage}}.</h1>
+<p>{{quantityMsg}}</p>
+<hr>
+<div id="conteneur_boxes">
+    {{ lastBooks | raw }} {# Data has to be escaped in the child views #} 
+    {{ topLocations | raw }} {# Data has to be escaped in the child views #} 
+    {{ topContributors | raw }} {# Data has to be escaped in the child views #} 
+    {{ topAuthors | raw }} {# Data has to be escaped in the child views #}
+</div>
+{% endblock %}

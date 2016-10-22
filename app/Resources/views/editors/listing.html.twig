@@ -1,0 +1,13 @@
+{% for editor in editors %}
+    <a href="{{ url('editor_details', {'slug': editor.slug})}}">{{ editor.name}}</a>
+    {% if is_granted('ROLE_USER') %}
+        <span class="editButtonsContainer" style="float:right;"><a class="editButton" href="{{ url('editor_edition', {'id': editor.id})}}">{% trans %}Edit{% endtrans %}</a></span>
+        <span style="float:right">
+            <form method="POST" action="{{ url('editor_deletion', {'id': editor.id})}}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('editorDeleteForm')}}"/>
+                <input onclick="return areYouSure();" type="submit" class="deleteButton" value="{% trans %}Delete{% endtrans %}"/>
+            </form>
+        </span>
+    {% endif %}
+    <hr>
+{% endfor%}

@@ -1,0 +1,13 @@
+{% for format in formats %}
+    <a href="{{ url('format_details', {'slug': format.slug})}}">{{ format.name}}</a>
+    {% if is_granted('ROLE_USER') %}
+        <span class="editButtonsContainer" style="float:right;"><a class="editButton" href="{{ url('format_edition', {'id': format.id})}}">{% trans %}Edit{% endtrans %}</a></span>
+        <span style="float:right">
+            <form method="POST" action="{{ url('format_deletion', {'id': format.id})}}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('formatDeleteForm')}}"/>
+                <input onclick="return areYouSure();" type="submit" class="deleteButton" value="{% trans %}Delete{% endtrans %}"/>
+            </form>
+        </span>
+    {% endif %}
+    <hr>
+{% endfor%}

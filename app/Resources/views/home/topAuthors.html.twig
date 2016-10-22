@@ -1,0 +1,10 @@
+{% extends 'home/topAuthorsContainer.html.twig' %}
+{% block authorContains %}
+    {% for theAuthor in theAuthors %}
+        <p class="widgetLine"><span class="bookHomeTitle">
+            {{theAuthor['name']}} {{theAuthor['surname']}}</span> 
+            ({{theAuthor['qty_occurences']}}
+            {%transchoice theAuthor['qty_occurences'] %}book{%endtranschoice%})
+        </p>
+    {% endfor %}
+{% endblock %}

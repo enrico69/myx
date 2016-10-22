@@ -1,0 +1,10 @@
+<form method="GET" id="searchForm" name="searchForm" action="{{ url('book_search_results') }}">
+    <input type="text" name="keyword" id="keyword" value="{% trans %}searchKeyword{% endtrans %}">
+    <select name="type" style="height:26px; width:174px;">  
+        {% set arrType = getStaticAttribute('AppBundle\\Entity\\Book', 'arrSearchTypes') %}
+        {% for strKey, item in arrType %}
+            <option value="{{strKey}}">{{strKey|trans}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="{% trans %}Search{% endtrans %}"/>
+</form>
