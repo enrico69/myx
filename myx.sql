@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 09 Octobre 2016 à 16:13
+-- Généré le: Sam 22 Octobre 2016 à 17:47
 -- Version du serveur: 5.5.40-0ubuntu0.14.04.1
 -- Version de PHP: 5.5.9-1ubuntu4.14
 
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `myx_author` (
 CREATE TABLE IF NOT EXISTS `myx_book` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
-  `description` varchar(100) NOT NULL,
+  `description` text NOT NULL,
   `year` int(11) NOT NULL,
   `editor` int(11) DEFAULT NULL,
   `format` int(11) DEFAULT NULL,
@@ -61,7 +61,6 @@ CREATE TABLE IF NOT EXISTS `myx_book` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `Slug` (`slug`),
   KEY `Title` (`title`),
-  KEY `Description` (`description`),
   KEY `Language` (`language`),
   KEY `Format` (`format`),
   KEY `Editor` (`editor`),
@@ -84,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `myx_comment` (
   PRIMARY KEY (`id`),
   KEY `Book_Id` (`book_id`),
   KEY `User_Id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -181,7 +180,16 @@ CREATE TABLE IF NOT EXISTS `myx_material` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `myx_material`
+--
+
+INSERT INTO `myx_material` (`id`, `name`) VALUES
+(1, 'Paper'),
+(2, 'Numeric'),
+(3, 'Audio');
 
 -- --------------------------------------------------------
 
@@ -282,10 +290,10 @@ ALTER TABLE `myx_book`
 -- Contraintes pour la table `myx_comment`
 --
 ALTER TABLE `myx_comment`
-  ADD CONSTRAINT `FK_CommentUser` FOREIGN KEY (`user_id`) REFERENCES `myx_user` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `Comment_Book_FK` FOREIGN KEY (`Book_Id`) REFERENCES `myx_book` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `Comment_User_FK` FOREIGN KEY (`User_Id`) REFERENCES `myx_user` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `FK_CommentBook` FOREIGN KEY (`book_id`) REFERENCES `myx_book` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `FK_CommentBook` FOREIGN KEY (`book_id`) REFERENCES `myx_book` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `FK_CommentUser` FOREIGN KEY (`user_id`) REFERENCES `myx_user` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Contraintes pour la table `myx_is_kind`
