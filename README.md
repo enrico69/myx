@@ -6,27 +6,30 @@ Whatever your level in Symfony, JS, HTML5, join the team to work on a real proje
 
 ##How to install it?
 
-*First method: clone this repository and make a composer install.
-*Or download the full package here
+* First method: clone this repository and make a composer install.
+* Or download the full package here :  [MyX 1.0.0](http://www.dynamic-mess.com/Media/myx1.0.0.zip)
 
 ##Setup database connexion
 
-Edit the file app/config/parameters.yml
+Edit the file 
+
+    app/config/parameters.yml
+
 
 ##Create the database
 
-As ther is no automated installation process yet, you have to use the myx.sql script in the root folder.
+As ther is no automated installation process yet, you have to use the _myx.sql_ script in the root folder.
 
 ##Create the first user account
 
 To create an account, you have to go to this URL : yourdomain.com/register.
 Fill the form and register. As there is no admin section at the moment, you have
-to activate the account manually. In the database, go to the myx_user table, and in the proper line, set the "enabled" to 1.
+to activate the account manually. In the database, go to the _myx_user table_, and in the proper_ line, set the "enabled" to 1.
 Now you can connect to site.
 
 ##Edit the welcome message
 
-Currently, as the is no back-office, you can edit the message directly in to the following file app/config/congif.yml. The variable name is: "site_welcome_message"
+Currently, as the is no back-office, you can edit the message directly in to the following file _app/config/congif.yml_. The variable name is: _site_welcome_message_
 
 ## What's next?
 
