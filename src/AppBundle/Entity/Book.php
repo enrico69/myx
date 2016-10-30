@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use AppBundle\Utils\Traits\GeneralTools;
 
 /**
  * Book
@@ -13,6 +14,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Book
 {
+    use GeneralTools;
+    
     // How many books will be displayed on a results page
     const QTY_BOOKS = 5;
     
@@ -54,7 +57,7 @@ class Book
     /**
      * @var string
      *
-     * @ORM\Column(name="isbn", type="string", length=13, nullable=true)
+     * @ORM\Column(name="isbn", type="string", length=17, nullable=true)
      */
     private $isbn;
     
@@ -644,5 +647,12 @@ class Book
     public function getMaterial()
     {
         return $this->material;
+    }
+    
+    /**
+     * @return string the title shortened
+     */
+    public function getShortTitle() {
+        return $this->tokenTruncate($this->title, 40) . "...";
     }
 }

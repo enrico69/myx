@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `myx_book` (
   `language` int(11) DEFAULT NULL,
   `addition_date` date NOT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `isbn` varchar(13) DEFAULT NULL,
+  `isbn` varchar(17) DEFAULT NULL,
   `keywords` varchar(100) DEFAULT NULL,
   `slug` varchar(100) NOT NULL,
   `last_user_id` int(11) DEFAULT NULL,

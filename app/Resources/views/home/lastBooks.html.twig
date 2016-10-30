@@ -2,7 +2,7 @@
 {% block bookContains %}
     {% for theBook in theBooks %}
         <p class="widgetLine"><span class="bookHomeTitle">
-            {{theBook.Title}}</span>, {% trans %}added.in{% endtrans %} 
+            {{theBook.shortTitle}}</span>, {% trans %}added.in{% endtrans %} 
             {{ theBook.additionDate.format('Y') }}
         </p>
     {% endfor %}
