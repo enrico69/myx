@@ -33,7 +33,8 @@ class UserRepository extends \Doctrine\ORM\EntityRepository {
                 u.surname AS user_surname
                 FROM AppBundle:Book b, AppBundle:User u
                 WHERE b.user = u.id
-                GROUP BY b.user'
+                GROUP BY b.user
+                ORDER BY qty_occurences DESC'
             )
             ->setMaxResults($intQty);
         

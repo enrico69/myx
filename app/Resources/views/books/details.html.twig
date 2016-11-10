@@ -1,9 +1,22 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+    {% if is_granted('ROLE_USER') %}
+        <span class="editButtonsContainer" style="float:right;"><a class="editButton" href="{{ url('book_edition', {'id': book.id})}}">{% trans %}Edit{% endtrans %}</a></span>
+    {% endif %}
     <h1>{{book.title}}</h1>
     <h2>{% trans %}Details{% endtrans %}</h2>
     <p>Id: {{ book.id }} </p>
     <p>{% trans %}Year{% endtrans %} : {{ book.year }}</p>
+    <p>{% transchoice 1 %}Author{% endtranschoice %} : 
+        {% for author in book.author %}
+           {{author.name}} {{author.surname}}
+        {% endfor%}
+    </p>
+    <p>{% transchoice 1 %}Location{% endtranschoice %} :
+        {% for location in book.location %}
+           {{location.name}} 
+        {% endfor%}
+    </p>
     <p>{% trans %}Material{% endtrans %} : {{ book.material.name | trans() }}</p>
     <p>{% transchoice 1 %}Editor{% endtranschoice %} : {{ book.editor.name }}</p>
     <p>{% transchoice 1 %}Format{% endtranschoice %} : {{ book.format.name }}</p>

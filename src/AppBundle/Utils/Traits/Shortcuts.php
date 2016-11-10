@@ -233,7 +233,7 @@ trait Shortcuts {
      * See target method documentation
      * @author Eric COURTIAL
      */
-    private function checkISBN($strISBN, $intType, $bookId) {
+    private function checkISBN($strISBN, $intType, $bookId = 0) {
         return $this->getUtils()->checkISBN($strISBN, $intType, $bookId);
     }
 }

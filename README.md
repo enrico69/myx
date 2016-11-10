@@ -7,7 +7,7 @@ Whatever your level in Symfony, JS, HTML5, join the team to work on a real proje
 ##How to install it?
 
 * First method: clone this repository and make a composer install.
-* Or download the full package here :  [MyX 1.0.0](http://www.dynamic-mess.com/Media/myx1.0.0.zip) , [MyX 1.0.1](http://www.dynamic-mess.com/Media/myx1.0.1.zip)
+* Or download the full package here :  [MyX 1.0.2](http://www.dynamic-mess.com/Media/myx1.0.2.zip)
 
 ##Setup database connexion
 
@@ -31,9 +31,6 @@ Now you can connect to site.
 
 Currently, as the is no back-office, you can edit the message directly in to the following file _app/config/congif.yml_. The variable name is: _site_welcome_message_
 
-##Migration
-* From 1.0.0 to 1.0.1 : just edit the 'isbn' field in the book table, and extend it to 17 chars.
-
 ## What's next?
 
 Here is a short list of the features to be added in the future:
@@ -48,4 +45,3 @@ Here is a short list of the features to be added in the future:
 * Installation process
 * SEO Management
 * User rights
-0

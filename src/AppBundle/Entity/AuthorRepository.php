@@ -40,7 +40,8 @@ class AuthorRepository extends \Doctrine\ORM\EntityRepository {
                 a.surname
                 FROM AppBundle:Author a
                 JOIN a.book b
-                GROUP BY a.id'
+                GROUP BY a.id
+                ORDER BY qty_occurences DESC'
             )
             ->setMaxResults($intQty);
         

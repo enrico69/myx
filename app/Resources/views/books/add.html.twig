@@ -4,4 +4,9 @@
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            resizeCheckBoxes();
+        });
+    </script>
 {% endblock %}

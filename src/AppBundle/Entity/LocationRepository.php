@@ -59,7 +59,8 @@ class LocationRepository extends EntityRepository {
                 l.name
                 FROM AppBundle:Location l
                 JOIN l.book b
-                GROUP BY l.id'
+                GROUP BY l.id
+                ORDER BY qty_occurences DESC'
             )
             ->setMaxResults($intQty);
         

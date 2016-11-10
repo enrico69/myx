@@ -238,5 +238,5 @@ form input, textarea, select {
 }
 
 form select[Multiple] {
-    height: 20px;
+    height: 100%;
 }
