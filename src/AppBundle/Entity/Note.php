@@ -21,7 +21,7 @@ class Note
      * @Assert\File(
      *      maxSize = "5M",
      *      maxSizeMessage = "file.too.big",
-     *      mimeTypes = {"text/plain", "application/msword", "application/pdf", "application/x-pdf"},
+     *      mimeTypes = {"text/plain", "application/msword", "application/pdf", "application/x-pdf", "application/x-rar", "application/zip"},
      *      mimeTypesMessage = "select.good.file"
      * )
      * @Assert\NotBlank(message="select.good.file")

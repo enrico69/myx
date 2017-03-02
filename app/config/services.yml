@@ -30,7 +30,7 @@ services:
         class: AppBundle\Form\NoteType
         tags:
             - { name: form.type }
-        arguments: ['@doctrine', '@request_stack']
+        arguments: ['@doctrine', '@request_stack', '@translator']
     site.type.book:
         class: AppBundle\Form\BookType
         tags:

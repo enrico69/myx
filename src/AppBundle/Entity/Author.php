@@ -210,6 +210,6 @@ class Author
      * @return string
      */
     public function __toString() {
-        return $this->getName() . " " . $this->getSurname();
+        return $this->getSurname() . " " . $this->getName();
     }
 }

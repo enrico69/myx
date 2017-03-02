@@ -70,6 +70,8 @@ class AddController extends Controller {
         $form->handleRequest($request);
         
         if($form->isSubmitted() && $form->isValid()) {
+            $this->openTransaction();
+            
             try {
                 // Handling the file
                 $file = $note->getFilename();
@@ -80,7 +82,6 @@ class AddController extends Controller {
                 $note->setBook($this->theBook);
                 $note->setUser($this->getUser());
                 
-                $this->openTransaction();
                 $this->getDoctrine()->getManager()->persist($note);
                 $this->getDoctrine()->getManager()->flush();
                 $this->commitTransaction();

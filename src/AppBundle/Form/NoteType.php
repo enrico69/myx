@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Doctrine\Bundle\DoctrineBundle\Registry as Doctrine;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Translation\TranslatorInterface;
 
 /**
  * This class represents the form for the editor entity
@@ -18,16 +19,18 @@ class NoteType extends AbstractType {
     
     private $em;
     private $request;
+    private $translator;
     
     /**
-     * Constructor
      * 
      * @param Doctrine $doctrine
-     * @param RequestStack $requestStack is the request stacl
+     * @param RequestStack $requestStack
+     * @param \AppBundle\Form\TranslatorInterface $translator
      */
-    public function __construct(Doctrine $doctrine, RequestStack $requestStack) {
+    public function __construct(Doctrine $doctrine, RequestStack $requestStack, TranslatorInterface  $translator) {
         $this->em = $doctrine->getManager();
         $this->request = $requestStack;
+        $this->translator = $translator;
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options) {
@@ -40,7 +43,7 @@ class NoteType extends AbstractType {
         
         $this->options = $options;
         $builder
-            ->add('filename', FileType::class, array('label' => $this->getTranslator()->trans('AuthFileType')))
+            ->add('filename', FileType::class, array('label' => $this->translator->trans('AuthFileType')))
             ->add('bookId', HiddenType::class, array(
                 "mapped" => false,
                 'data' => $this->options['bookId']))
