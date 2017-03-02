@@ -3,11 +3,11 @@ An educational Symfony 3 based project to administrate and record all your media
 Currently, only books are managed, but the next version will handle movies, games...
 
 Whatever your level in Symfony, JS, HTML5, join the team to work on a real project and to get a reference.
+You can see a running version here [MyX](http://books.dynamic-mess.com/)
 
 ##How to install it?
 
-* First method: clone this repository and make a composer install.
-* Or download the full package here :  [MyX 1.0.2](http://www.dynamic-mess.com/Media/myx1.0.2.zip)
+* Clone this repository and make a composer install.
 
 ##Setup database connexion
 
