@@ -48,14 +48,6 @@ class AddController extends Controller {
                     $strMessage = 'field.already.exists';
                     $strDuplicateField = "Slug";
                 }
-                if(!$blnFound) {
-                    $authorBis = $this->getAuthorRepository()->findByName($author->getName());
-                    if(count($authorBis) > 0) {
-                        $blnFound = true;
-                        $strMessage = 'field.already.exists';
-                        $strDuplicateField = "Name";
-                    }
-                }
             } catch (\Exception $ex) {
                 $this->getLogger()
                     ->error('Error during the research of a author'
